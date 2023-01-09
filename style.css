@@ -37,6 +37,7 @@ header {
     "text";
   gap: 2rem;
   position: relative;
+  padding-bottom: 2em;
 }
 
 nav {
@@ -79,6 +80,7 @@ header div#hero-text h1 {
 
 #hero-text p {
   color: var(--second-text);
+  margin-bottom: 3em;
 }
 
 header div#hero-text a {
@@ -89,8 +91,6 @@ header div#hero-text a {
   border-radius: 5px;
   border: 1px solid #5bc702;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-  position: absolute;
-  bottom: 0;
 }
 
 header div#hero-img {
