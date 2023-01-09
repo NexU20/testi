@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-text: #ffffff;
+  --second-text: #9c9c9c;
+}
+
+/* classes */
+.ibm-plex {
+  font-family: "IBM Plex Mono", monospace;
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+.bold {
+  font-weight: 700;
+}
+.extrabold {
+  font-weight: 800;
+}
+
+/* header styles */
+header {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content 1fr 1fr;
+  grid-template-areas:
+    "nav"
+    "img"
+    "text";
+  gap: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+  padding: 1.5rem 2rem;
+  width: 80%;
+  grid-area: nav;
+  border-radius: 10px;
+  justify-self: center;
+}
+
+header nav > ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav > ul:nth-child(1) {
+  gap: 2rem;
+}
+header nav > ul:nth-child(2) {
+  gap: 1rem;
+}
+
+nav ul li > a {
+  text-decoration: none;
+  color: var(--second-text);
+}
+
+header div#hero-text {
+  grid-area: text;
+  padding: 0 2em;
+}
+
+header div#hero-text h1 {
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+}
+
+#hero-text p {
+  color: var(--second-text);
+}
+
+header div#hero-text a {
+  text-decoration: none;
+  color: var(--main-text);
+  padding: 1em 3em;
+  background-color: #3f8e00;
+  border-radius: 5px;
+  border: 1px solid #5bc702;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  position: relative;
+  top: 3em;
+}
+
+header div#hero-img {
+  grid-area: img;
+  text-align: center;
+}
+
+header div#hero-img img {
+  border-radius: 50%;
+  max-width: 350px;
+  width: 70%;
+  box-shadow: 0 0 2px 2px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.5);
+}
