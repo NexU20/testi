@@ -25,17 +25,18 @@
 /* header styles */
 header {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: black;
   color: #ffffff;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content 1fr 1fr;
+  grid-template-rows: min-content min-content auto;
   grid-template-areas:
     "nav"
     "img"
     "text";
   gap: 2rem;
+  padding-bottom: 3em;
 }
 
 nav {
@@ -78,6 +79,7 @@ header div#hero-text h1 {
 
 #hero-text p {
   color: var(--second-text);
+  margin-bottom: 3em;
 }
 
 header div#hero-text a {
@@ -88,8 +90,8 @@ header div#hero-text a {
   border-radius: 5px;
   border: 1px solid #5bc702;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-  position: relative;
-  top: 3em;
+  /* position: absolute; */
+  /* bottom: 0; */
 }
 
 header div#hero-img {
