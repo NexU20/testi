@@ -25,17 +25,18 @@
 /* header styles */
 header {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: black;
   color: #ffffff;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content 1fr 1fr;
+  grid-template-rows: min-content auto min-content;
   grid-template-areas:
     "nav"
     "img"
     "text";
-  gap: 2rem;
+  gap: 2.5rem;
+  padding-bottom: 3em;
 }
 
 nav {
@@ -93,15 +94,16 @@ header div#hero-text a {
 
 header div#hero-img {
   grid-area: img;
-  align-self: end;
+  /* align-self: end; */
   text-align: center;
 }
 
 header div#hero-img img {
   border-radius: 50%;
   min-height: 250px;
-  width: 70%;
+  width: 80%;
   max-width: 350px;
+  object-fit: cover;
   box-shadow: 0 0 2px 2px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.5);
 }
 /* end of header styles */
@@ -130,29 +132,35 @@ div#write-up {
 /* media query brekpoints */
 @media only screen and (min-width: 768px) {
   header {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto 40%;
     grid-template-rows: min-content auto;
     grid-template-areas:
       "nav nav"
       "text img";
-    gap: 0;
+    gap: 3em 2em;
   }
 
   /* header div {
-    background-color: red;
+    border: 1px solid red;
   } */
 
   header div#hero-text {
     align-self: center;
-    justify-self: center;
     padding-left: 5em;
+    padding-right: 4em;
   }
 
   header div#hero-text a {
-    padding: 1em 10px;
+    padding: 1em 15px;
   }
 
   header div#hero-img {
-    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  header div#hero-img img {
+    position: relative;
+    right: 3em;
   }
 }
