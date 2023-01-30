@@ -8,6 +8,10 @@
   --second-text: #9c9c9c;
 }
 
+body{
+  scroll-behavior: smooth;
+}
+
 /* classes */
 .ibm-plex {
   font-family: "IBM Plex Mono", monospace;
@@ -83,6 +87,7 @@ header div#hero-text h1 {
 }
 
 header div#hero-text a {
+  display: inline-block;
   text-decoration: none;
   color: var(--main-text);
   padding: 1em 3em;
@@ -94,7 +99,6 @@ header div#hero-text a {
 
 header div#hero-img {
   grid-area: img;
-  /* align-self: end; */
   text-align: center;
 }
 
@@ -130,6 +134,8 @@ div#write-up {
 }
 
 /* media query brekpoints */
+
+/* tablet */
 @media only screen and (min-width: 768px) {
   header {
     grid-template-columns: auto 40%;
