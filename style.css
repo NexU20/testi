@@ -140,10 +140,6 @@ div#write-up {
     gap: 3em 2em;
   }
 
-  /* header div {
-    border: 1px solid red;
-  } */
-
   header div#hero-text {
     align-self: center;
     padding-left: 5em;
